@@ -1,0 +1,14 @@
+{
+    "name": "cedarapp",
+    "version": "0.0.1",
+    "description": "Something generates simple math questions",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "AL",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
