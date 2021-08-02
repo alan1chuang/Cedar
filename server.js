@@ -1,7 +1,7 @@
 var express = require('express');
+const { CreateMathExerciseCreateRequest } = require("./CreateMathExerciseCreateRequest");
 const { MathExerciseCreateRequest } = require("./MathExerciseCreateRequest");
 const { MathExercisesGenerator } = require("./MathExercisesGenerator");
-const { MathLevelMapper } = require("./MathLevelMapper");
 var app = express();
 
 //localhost:3000/mathexercises?operation=addition&level=1
@@ -11,7 +11,7 @@ app.get('/mathexercises', function(req, res) {
     var operation = req.query.operation;
     var level = req.query.level;
     try{
-        var mathExerciseCreateRequest = MathLevelMapper(operation, level);
+        var mathExerciseCreateRequest = CreateMathExerciseCreateRequest(operation, level);
         questions = MathExercisesGenerator(mathExerciseCreateRequest);
         res.status(200).json(questions);
     }
