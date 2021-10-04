@@ -39,7 +39,8 @@ function GenerateExercisesForSubtraction(mathExerciseCreateRequest) {
         }   
         
         data = {
-            question: `${question.x} ${mathExerciseCreateRequest.operation} ${question.y} = `,
+            //question: `${question.x} ${mathExerciseCreateRequest.operation} ${question.y} = `,
+            question: `${question.x} - ${question.y} = `,
             answer: question.answer
         };
         questions.push(data);
